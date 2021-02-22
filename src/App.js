@@ -19,14 +19,14 @@ const foodList = {
   "🌭": "hot dog"
 };
 
-var foodWeKnow = Object.keys(foodList);
+let foodWeKnow = Object.keys(foodList);
 
 export default function App() {
-  var [meaning, setMeaning] = useState("food item name appears here");
+  let [meaning, setMeaning] = useState("food item name appears here");
 
   function flagInputHandler() {
-    var userInput = event.target.value;
-    var meaning = foodList[userInput];
+    let userInput = event.target.value;
+   let meaning = foodList[userInput];
 
     if (meaning === undefined) {
       meaning = "Food item not in our database";
@@ -34,7 +34,7 @@ export default function App() {
     setMeaning(meaning);
   }
   function flagClickHandler(flag) {
-    var meaning = foodList[flag];
+    let meaning = foodList[flag];
     setMeaning(meaning);
   }
 
